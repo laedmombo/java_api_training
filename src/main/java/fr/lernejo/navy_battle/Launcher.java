@@ -17,6 +17,7 @@ public class Launcher {
             LaunchServer(args[0]);
         } else {
             if (args.length == 2) {
+                LaunchServer(args[0]);
                 LaunchClient(args[0], args[1]);
             } else {
                 System.out.println("Invalid number of parameters");

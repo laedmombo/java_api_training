@@ -48,12 +48,12 @@ public final class GameFireHandler implements HttpHandler {
         JSONObject json = new JSONObject();
         json.put("consequence", res);
         json.put("shipLeft", _player2.hasShipLeft());
-        json.put("Content-Type", "application/json");
         return json;
     }
 
     private void createResponse(HttpExchange exchange, JSONObject json) throws IOException {
-        String response = json.toString(4) + "\n" + _board.toString();
+        String response = json.toString(4);
+        exchange.getResponseHeaders().add("Content-Type", "application/json");
         exchange.sendResponseHeaders(200, response.length());
         OutputStream os = exchange.getResponseBody();
         os.write(response.getBytes(StandardCharsets.UTF_8));
