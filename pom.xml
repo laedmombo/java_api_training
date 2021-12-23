@@ -19,6 +19,11 @@
   	<jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>	
     </properties>
 	<dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160810</version>
+        </dependency>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
@@ -28,14 +33,9 @@
     <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20160810</version>
-        </dependency>        <version>${assertj.version}</version>
+        <version>${assertj.version}</version>
         <scope>test</scope>
     </dependency>
-
 </dependencies>
 <build>
     <pluginManagement>
