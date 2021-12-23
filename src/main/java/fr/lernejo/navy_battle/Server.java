@@ -19,7 +19,6 @@ public class Server {
     private final PingHandler _pingHandler;
     private final GameStartHandler _gameStartHandler;
     private final GameFireHandler _gameFireHandler;
-
     Server(int port) throws IOException {
         _server = HttpServer.create(new InetSocketAddress(port), 0);
         _server.setExecutor(Executors.newSingleThreadExecutor());
